@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+<head>
+	<title>Examen de informática</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   	<link rel='stylesheet' media='screen and (min-width: 961px)' href='css/d.css'>
+	<link rel='stylesheet' media='screen and (max-width: 960px)' href='css/m.css'>
+	<link rel="icon" type="image/png" href="img/favicon.png" />
+    <script src="js/code.js"></script>
+    <meta charset="utf-8">
+	
+	<meta name="description" content="Examen de informática de la universidad de Palma">
+	<meta charset="utf-8">
+</head>
+<body>
+	<!--Cabecera-->
+    <div class="general">
+	<div class="cabecera">
+    	<h1>Examen general de informática</h1>
+        	<img class="banner" src="img/banner.jpg"></img></body><br>
+    	<div class="popupdiv">
+    		<div class="popup" onclick="myFunction()"><p class="instrucciones">Instrucciones, haz click aquí</p>
+			<span class="popuptexto" id="myPopup">
+        	<p>En este examen se pondrán a prueba tus conocimientos generales de informática.<br>
+       		   Cada pregunta respondida correctamente vale 1 punto, haciendo un total de 10 puntos.<br>
+               ¡Suerte!<br>
+               haz click en esta ventana para cerrarla
+            </p>
+        	</span>
+			</div>
+    	</div>
+    </div>
+    <div class="temporizador">
+			<label><b>Tiempo restante</b> </label>
+			</br>
+			<label id = "tiempo"><b>10:00</b></label>
+        </div>
+	</div>
+    		<!--Formulario del examen-->
+			<div id="formulario">
+				<form id="myForm">
+			<!-- PREGUNTA 1 -->
+           		<div class="preguntastext">
+        		<legend class="leyenda">Pregunta 1</legend>
+				<div id="pregunta1" class="pregunta"></div></li>
+				<input type="texto" name="respuesta_text1" id="respuesta_text1" class="bloquetexto">
+                <br>
+                <br> 
+                <br> 
+             </div>
+			<!-- PREGUNTA 2 -->
+            <div class="preguntastext">
+       			<legend class="leyenda">Pregunta 2: selecciona la opción correcta</legend>
+				<div id="pregunta2" class="pregunta"></div>
+				<input type="texto" name="respuesta_text2" id="respuesta_text2" class="bloquetexto">
+                <br>
+                <br> 
+                <br> 
+            </div>
+            <!-- PREGUNTA 3 -->	
+            <div class="preguntastext">
+            	<legend class="leyenda">Pregunta 3</legend>
+				<div id="pregunta3" class="pregunta"></div>
+				<div id="radioDiv1" class="radiopcion"></div>
+                <br>
+            </div>
+			<!-- PREGUNTA 4 -->
+            <div class="preguntastext">
+            	<legend class="leyenda">Pregunta 4</legend>
+				<div id="pregunta4" class="pregunta"></div>
+				<div id="radioDiv2" class="radiopcion"></div>
+				<br>
+            </div>
+            <!-- PREGUNTA 5 -->
+			<div class="preguntastext">
+            	<legend class="leyenda">Pregunta 5</legend>
+				<div id="pregunta5" class="pregunta"></div>
+				<select multiple id="multiple1" class="smultiple1"  onclick="marcar(this)"></select>
+            </div>
+            <!-- PREGUNTA 6 -->
+			<div class="preguntastext">
+            	<legend class="leyenda">Pregunta 6</legend>
+				<div id="pregunta6" class="pregunta"></div>
+				<select multiple id="multiple2" class="smultiple2" onclick="marcar(this)"></select>
+            </div>
+            <!-- PREGUNTA 7 -->
+			<div class="preguntastext">
+            	<legend class="leyenda">Pregunta 7</legend>
+				<div id="pregunta7" class="pregunta"></div>
+				<select id="select1" class="select">
+				<option selected value="-1">Selecciona una...</option>
+				</select>
+            </div>
+            <!-- PREGUNTA 8 -->
+			<div class="preguntastext">
+            	<legend class="leyenda">Pregunta 8</legend>
+				<div id="pregunta8" class="pregunta"></div>
+				<select id="select2" class="select">
+				<option selected value="-1">Selecciona una...</option>
+				</select>
+            </div>
+			<!-- PREGUNTA 9 -->
+            <div class="preguntastext">
+            	<legend class="leyenda">Pregunta 9</legend>
+                <div id="pregunta9" class="pregunta"></div>
+				<div id="checkboxDiv1" class="textocheckbox"></div>
+            </div>
+            <!-- PREGUNTA 10 -->
+            <div class="preguntastext">
+            	<legend class="leyenda">Pregunta 10</legend>
+				<div id="pregunta10" class="pregunta"></div>
+				<div id="checkboxDiv2" class="textocheckbox"></div>
+                </div>
+            <!--Pie de página-->
+			<div id="botonera" class="pie">
+            <!--Botón de corrección del examen-->
+				<input type='submit' id="submitButton" value='Corregir' class="boton">
+			</div>
+				</form>
+            </div>
+            <!--Corrección del examen-->
+			<div id="resultados">
+			</div>
+			</div>
+			</div>
+			</div>
+            </div>
+</body>
+</html>
