@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="transform.xsl"?>
+<questions>
+	<!--PREGUNTA 1-->
+	<question id="PREGUNTA1"> 
+		<type>text</type>
+		<title>¿Cuántos Kilobytes tiene un Gigabyte?</title>
+		<answer>1048576</answer>
+	</question>	
+	<!--PREGUNTA 2-->
+	<question id="PREGUNTA2"> 
+		<type>text</type>
+		<title>Expresa el número 575 decimal en binario</title>
+		<answer>1000111111</answer>
+	</question>	
+	<!--PREGUNTA 3-->
+	<question id="PREGUNTA3"> 
+		<type>radio</type>
+		<title>¿Qué es hardware?</title>
+		<option>Los programas del ordenador</option>
+		<option>Es un tipo de virus</option>
+		<option>Es la parte física del ordenador</option>
+		<option>Es la parte lógica del ordenador</option>
+		<answer>3</answer>
+	</question>
+	<!--PREGUNTA 4-->
+	<question id="PREGUNTA4"> 
+		<type>radio</type>
+		<title>¿Cuáles son tipos de virus?</title>		
+		<option>Firewall, P2P Y Block</option>
+		<option>Spyware, Troyano y Gusano</option>
+		<option>AVG, Avast y Norton</option>
+		<answer>2</answer>
+	</question>
+	<!--PREGUNTA 5-->
+	<question id="PREGUNTA5"> 
+		<type>multiple</type>
+		<title>De estas partes de la placa base, ¿cuáles son ranuras de expansión?</title>
+		<option>PCI-Express</option>
+		<option>Slot de memoria RAM</option>
+		<option>Northbridge</option>
+		<option>Southbridge</option>
+		<answer>1</answer>
+		<answer>2</answer>
+	</question>
+	<!--PREGUNTA 6-->
+	<question id="PREGUNTA6"> 
+		<type>multiple</type>
+		<title>¿Cuáles de estos periféricos son de salida?</title>
+		<option>Monitor</option>
+		<option>Teclado y ratón</option>
+		<option>Escáner</option>
+		<option>Impresora</option>
+		<option>Altavoces</option>
+		<option>Micrófono</option>
+		<answer>1</answer>
+		<answer>4</answer>
+		<answer>5</answer>
+	</question>	
+	<!--PREGUNTA 7-->
+	<question id="PREGUNTA7"> 
+		<type>select</type>
+		<title>¿Cuáles de estos programas son de Office?</title>
+		<option>Fireworks, Flash, y Dreamweaver</option>
+		<option>Word, Excel y Access</option>
+		<option>Paint, Explorer y Movie Maker</option>
+		<option>Writter, Calc e Impress</option>
+		<answer>2</answer>
+	</question>
+	<!--PREGUNTA 8-->
+	<question id="PREGUNTA8"> 
+		<type>select</type>
+		<title>Para cerrar una ventana en Windows, ¿qué atajo de teclado debemos pulsar?</title>
+		<option>Tecla Windows+E</option>
+		<option>Ctrl + Esc</option>
+		<option>Alt + F4</option>
+		<option>Ctrl + C</option>
+		<answer>3</answer>
+	</question>
+	<!--PREGUNTA 9-->
+	<question id="PREGUNTA9"> 
+		<type>checkbox</type>
+		<title>¿Cuál o cuáles de estos comandos se utilizan en la terminal de Linux?</title>
+		<option>cd</option>
+		<option>dir</option>
+		<option>mkdir</option>
+		<option>md</option>
+		<answer>1</answer>
+		<answer>3</answer>
+	</question>
+	<!--PREGUNTA 10-->
+	<question id="PREGUNTA10"> 
+		<type>checkbox</type>
+		<title>¿Cuál o cuáles de estas palabras son particiones de disco duro?</title>
+		<option>Primaria</option>
+		<option>Secundaria</option>
+		<option>Extendida</option>
+		<option>lógica</option>
+		<answer>1</answer>
+		<answer>3</answer>
+		<answer>4</answer>
+	</question>	
+</questions>

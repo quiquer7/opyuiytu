@@ -1,0 +1,136 @@
+{
+ 	"xsl:stylesheet": {
+    "-version": "1.0",
+    "-xmlns:xsl": "http://www.w3.org/1999/XSL/Transform",
+    "xsl:template": {
+      "-match": "/",
+      "div": {
+        "-id": "xsl_body",
+        "table": {
+          "-id": "xsl_transform",
+          "thead": {
+            "tr": {
+              "th": [
+                "Preguntas",
+                "Respuestas",
+                "Corrección"
+              ]
+            }
+          },
+          "tbody": {
+            "xsl:for-each": {
+              "-select": "questions/question",
+              "tr": {
+                "-class": "quest_row",
+                "td": [
+                  {
+                    "-class": "title",
+                    "xsl:value-of": { "-select": "title" }
+                  },
+                  {
+                    "-class": "option",
+                    "xsl:for-each": [
+                      {
+                        "-select": "answer",
+                        "xsl:choose": {
+                          "xsl:when": {
+                            "-test": "../type = 'text'",
+                            "span": {
+                              "xsl:value-of": { "-select": "text()" }
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "-select": "option",
+                        "tr": {
+                          "-class": "options_rows",
+                          "xsl:variable": [
+                            {
+                              "-name": "optposition",
+                              "-select": "position()-1"
+                            },
+                            {
+                              "-name": "opttext",
+                              "-select": "text()"
+                            }
+                          ],
+                          "td": {
+                            "-class": "opciones_text",
+                            "#text": [
+                              "
+										O",
+                              ": 
+										"
+                            ],
+                            "xsl:value-of": [
+                              { "-select": "$optposition+1" },
+                              { "-select": "$opttext" }
+                            ]
+                          },
+                          "xsl:for-each": {
+                            "-select": "../answer",
+                            "xsl:variable": {
+                              "-name": "correctanswer",
+                              "-select": "text()-1"
+                            },
+                            "xsl:if": {
+                              "-test": "$optposition=$correctanswer",
+                              "td": {
+                                "-class": "correcta",
+                                "span": "?"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "-class": "answer",
+                    "xsl:for-each": {
+                      "-select": "useranswer",
+                      "tr": {
+                        "-class": "answer_row",
+                        "xsl:variable": {
+                          "-name": "useranswer",
+                          "-select": "text()"
+                        },
+                        "td": {
+                          "-class": "respuesta",
+                          "xsl:value-of": { "-select": "text()" }
+                        },
+                        "xsl:for-each": {
+                          "-select": "./correcto",
+                          "xsl:variable": {
+                            "-name": "valido",
+                            "-select": "text()"
+                          },
+                          "xsl:choose": {
+                            "xsl:when": {
+                              "-test": "$valido = '1'",
+                              "td": {
+                                "-class": "correcta",
+                                "span": "?"
+                              }
+                            },
+                            "xsl:otherwise": {
+                              "td": {
+                                "-class": "incorrecta",
+                                "span": "X"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
